@@ -27,7 +27,9 @@ function setup() {
 	mango7=new mango(1000,90,30);
 	mango8=new mango(900,190,30);
 	mango9=new mango(950,260,30);
-	mango10=new mango(1200,220,30);
+  mango10=new mango(1200,220,30);
+  
+  stoneObj=new stone(200,400);
 
 	treeObj=new tree(1050,580);
 
@@ -55,6 +57,7 @@ function draw() {
   detectollision(stoneObj,mango9);
   detectollision(stoneObj,mango10);
 
+  treeObj.display();
   mango1.display();
   mango2.display();
   mango3.display();
@@ -66,7 +69,7 @@ function draw() {
   mango9.display();
   mango10.display();
 
-  treeObj.display();
+  stoneObj.display();
   groundObj.display();
   launcherObj.display();
 
@@ -77,7 +80,7 @@ function mouseDragged(){
 }
 
 function mouseReleased(){
-  slingshot.fly();
+ launcherObj.fly();
 }
 
 function keyPressed(){
